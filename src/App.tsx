@@ -1,4 +1,5 @@
 import { Grid, GridItem } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 function App() {
   return (
     <Grid
@@ -9,8 +10,8 @@ function App() {
       gridTemplateColumns={{ base: "1fr", lg: "250px 1fr" }}
       gap={4}
     >
-      <GridItem area="nav" bg="coral" p={4}>
-        Nav
+      <GridItem area="nav" p={4}>
+        <NavBar />
       </GridItem>
 
       <GridItem
