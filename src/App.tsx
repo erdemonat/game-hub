@@ -16,14 +16,13 @@ function App() {
 
       <GridItem
         area="aside"
-        bg="gold"
         p={4}
         display={{ base: "none", lg: "block" }} // `Show` yerine `display`
       >
         Aside
       </GridItem>
 
-      <GridItem area="main" bg="dodgerblue" p={4}>
+      <GridItem area="main" p={4}>
         Main
       </GridItem>
     </Grid>
