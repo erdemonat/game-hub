@@ -9,7 +9,7 @@ function App() {
         base: `"nav" "main"`,
         lg: `"nav nav" "aside main"`,
       }}
-      gridTemplateColumns={{ base: "1fr", lg: "250px 1fr" }}
+      gridTemplateColumns={{ base: "1fr", lg: "200px 1fr" }}
       gap={4}
     >
       <GridItem area="nav" p={4}>
@@ -18,8 +18,9 @@ function App() {
 
       <GridItem
         area="aside"
+        paddingX={5}
         p={4}
-        display={{ base: "none", lg: "block" }} // `Show` yerine `display`
+        display={{ base: "none", lg: "block" }}
       >
         <GenreList />
       </GridItem>

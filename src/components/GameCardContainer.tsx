@@ -6,11 +6,7 @@ interface Props {
 }
 
 const GameCardContainer = ({ children }: Props) => {
-  return (
-    <Box w={"200"} display={"flex"}>
-      {children}
-    </Box>
-  );
+  return <Box>{children}</Box>;
 };
 
 export default GameCardContainer;
