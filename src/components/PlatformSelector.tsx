@@ -8,7 +8,6 @@ import {
   MenuRoot,
   MenuTrigger,
   Portal,
-  VStack,
 } from "@chakra-ui/react";
 import { BsChevronDown } from "react-icons/bs";
 
@@ -22,31 +21,29 @@ const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
 
   if (error) return null;
   return (
-    <VStack>
-      <MenuRoot>
-        <MenuTrigger asChild>
-          <Button variant={"surface"} size={"sm"} maxW={"-webkit-fit-content"}>
-            {selectedPlatform?.name || "Platforms"}
-            <BsChevronDown />
-          </Button>
-        </MenuTrigger>
-        <Portal>
-          <Menu.Positioner>
-            <MenuContent>
-              {data.map((platform) => (
-                <MenuItem
-                  onClick={() => onSelectPlatform(platform)}
-                  value={platform.name}
-                  key={platform.id}
-                >
-                  {platform.name}
-                </MenuItem>
-              ))}
-            </MenuContent>
-          </Menu.Positioner>
-        </Portal>
-      </MenuRoot>
-    </VStack>
+    <MenuRoot>
+      <MenuTrigger asChild>
+        <Button variant={"surface"} size={"sm"} maxW={"-webkit-fit-content"}>
+          {selectedPlatform?.name || "Platforms"}
+          <BsChevronDown />
+        </Button>
+      </MenuTrigger>
+      <Portal>
+        <Menu.Positioner>
+          <MenuContent>
+            {data.map((platform) => (
+              <MenuItem
+                onClick={() => onSelectPlatform(platform)}
+                value={platform.name}
+                key={platform.id}
+              >
+                {platform.name}
+              </MenuItem>
+            ))}
+          </MenuContent>
+        </Menu.Positioner>
+      </Portal>
+    </MenuRoot>
   );
 };
 
